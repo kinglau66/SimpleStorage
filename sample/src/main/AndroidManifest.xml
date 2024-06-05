@@ -17,7 +17,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,LockedOrientationActivity">
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".activity.JavaActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>

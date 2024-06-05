@@ -127,7 +127,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.layoutBaseOperation.btnSelectFile.setOnClickListener {
-            storageHelper.openFilePicker(REQUEST_CODE_PICK_FILE, true)
+            storageHelper.openFilePicker(REQUEST_CODE_PICK_FILE, true, null, "application/pdf" )
         }
 
         binding.layoutBaseOperation.btnCreateFile.setOnClickListener {

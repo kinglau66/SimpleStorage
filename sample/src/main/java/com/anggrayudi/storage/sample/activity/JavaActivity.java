@@ -17,6 +17,7 @@ import androidx.documentfile.provider.DocumentFile;
 import com.anggrayudi.storage.SimpleStorageHelper;
 import com.anggrayudi.storage.callback.FileCallback;
 import com.anggrayudi.storage.file.DocumentFileUtils;
+import com.anggrayudi.storage.file.FileFullPath;
 import com.anggrayudi.storage.media.MediaFile;
 import com.anggrayudi.storage.permission.ActivityPermissionRequest;
 import com.anggrayudi.storage.permission.PermissionCallback;
@@ -68,7 +69,7 @@ public class JavaActivity extends AppCompatActivity {
         findViewById(R.id.btnRequestStoragePermission).setOnClickListener(v -> permissionRequest.check());
         findViewById(R.id.btnRequestStoragePermission).setEnabled(Build.VERSION.SDK_INT >= 23 && Build.VERSION.SDK_INT <= 28);
         findViewById(R.id.btnSelectFolder).setOnClickListener(v -> storageHelper.openFolderPicker(REQUEST_CODE_PICK_FOLDER));
-        findViewById(R.id.btnSelectFile).setOnClickListener(v -> storageHelper.openFilePicker(REQUEST_CODE_PICK_FILE));
+        findViewById(R.id.btnSelectFile).setOnClickListener(v -> storageHelper.openFilePicker(REQUEST_CODE_PICK_FILE, true, (FileFullPath) null, "application/pdf"));
         findViewById(R.id.btnCreateFile).setOnClickListener(v -> storageHelper.createFile("text/plain", "File name", null, REQUEST_CODE_CREATE_FILE));
     }
 
